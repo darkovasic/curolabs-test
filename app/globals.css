@@ -13,7 +13,7 @@
     --primary: 330, 7%, 6%, 1;
     --primary-foreground: 210 20% 98%;
     --secondary: 340, 3%, 18%, 1;
-    --secondary-foreground: 330, 2%, 53%, 1;
+    --secondary-foreground: 330, 2%, 53%;
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
     --accent: 220 14.3% 95.9%;
@@ -29,10 +29,10 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --positive: 158, 60%, 48%, 1;
+    --positive: 158, 60%, 48%;
     --negative: 0, 84%, 63%;
-    --select: 330, 5%, 8%, 1;
-    --pink: 331, 54%, 47%, 1;
+    --select: 330, 5%, 8%;
+    --pink: 331, 54%, 47%;
   }
 
   .dark {

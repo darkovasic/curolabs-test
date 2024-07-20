@@ -3,12 +3,13 @@ import logo from "@/public/logo.png";
 import { Separator } from "@/components/ui/separator";
 import { SelectRange } from "@/components/SelectRange";
 import { Button } from "@/components/ui/button";
+import { metrics } from "@/lib/data";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col w-[1368px] h-[211px] bg-primary p-6">
-        <div className="flex items-center pb-6">
+      <div className="flex flex-col w-[1368px] bg-primary p-6">
+        <div className="flex items-center pb-4">
           <div className="flex shrink-0 w-10 h-10">
             <Image src={logo} alt="Curo Labs Logo" priority />
           </div>
@@ -17,7 +18,7 @@ export default function Home() {
               SecondaryAccount
             </p>
             <p className="text-[12px] leading-[18px] font-normal text-secondary-foreground">
-              Account ID: 127417370745
+              Account ID: {metrics.account_id}
             </p>
           </div>
           <div className="flex justify-center h-8 px-8">
@@ -29,36 +30,58 @@ export default function Home() {
                 <p className="text-[12px] leading-[18px] font-normal text-secondary-foreground">
                   Trading Days
                 </p>
-                <p className="text-[14px] leading-[21px] font-medium">5</p>
+                <p className="text-[14px] leading-[21px] font-medium">
+                  {metrics.trading_days}
+                </p>
               </div>
               <div className="flex flex-col justify-center gap-[2px]">
                 <p className="text-[12px] leading-[18px] font-normal text-secondary-foreground">
                   Daily DD
                 </p>
-                <p className="text-[14px] leading-[21px] font-medium">NaN</p>
+                <p
+                  className={`text-[14px] leading-[21px] font-medium ${
+                    metrics.daily_dd < 0 ? "text-negative" : "text-positive"
+                  }`}
+                >
+                  {metrics.daily_dd}%
+                </p>
               </div>
               <div className="flex flex-col justify-center gap-[2px]">
                 <p className="text-[12px] leading-[18px] font-normal text-secondary-foreground">
                   Max Daily DD
                 </p>
-                <p className="text-[14px] leading-[21px] font-medium text-negative">
-                  -0.05%
+                <p
+                  className={`text-[14px] leading-[21px] font-medium ${
+                    metrics.max_daily_dd < 0 ? "text-negative" : "text-positive"
+                  }`}
+                >
+                  {metrics.max_daily_dd}%
                 </p>
               </div>
               <div className="flex flex-col justify-center gap-[2px]">
                 <p className="text-[12px] leading-[18px] font-normal text-secondary-foreground">
                   Max DD
                 </p>
-                <p className="text-[14px] leading-[21px] font-medium text-negative">
-                  -100%
+                <p
+                  className={`text-[14px] leading-[21px] font-medium ${
+                    metrics.max_dd < 0 ? "text-negative" : "text-positive"
+                  }`}
+                >
+                  {metrics.max_dd}%
                 </p>
               </div>
               <div className="flex flex-col justify-center gap-[2px]">
                 <p className="text-[12px] leading-[18px] font-normal text-secondary-foreground">
                   Profit Target
                 </p>
-                <p className="text-[14px] leading-[21px] font-medium text-negative">
-                  -0.15%
+                <p
+                  className={`text-[14px] leading-[21px] font-medium ${
+                    metrics.profit_target < 0
+                      ? "text-negative"
+                      : "text-positive"
+                  }`}
+                >
+                  {metrics.profit_target}%
                 </p>
               </div>
             </div>
@@ -103,6 +126,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="flex justify-between w-full h-[100px]"></div>
       </div>
     </main>
   );

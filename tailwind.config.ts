@@ -52,8 +52,12 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        positive: "hsl(var(--positive))",
-        negative: "hsl(var(--negative))",
+        positive: {
+          DEFAULT: "hsl(var(--positive))",
+        },
+        negative: {
+          DEFAULT: "hsl(var(--negative))",
+        },
         select: {
           DEFAULT: "hsl(var(--select))",
         },
