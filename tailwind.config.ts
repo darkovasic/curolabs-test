@@ -51,6 +51,7 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          icon: "hsl(var(--card-icon))",
         },
         positive: {
           DEFAULT: "hsl(var(--positive))",
@@ -62,6 +63,7 @@ const config = {
           DEFAULT: "hsl(var(--select))",
         },
         pink: "hsl(var(--pink))",
+        counter: "hsl(var(--counter))",
       },
       borderRadius: {
         lg: "var(--radius)",

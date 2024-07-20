@@ -6,8 +6,9 @@
   :root {
     --background: 240 3% 16%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 100%;
+    --card: 330, 5%, 8%;
     --card-foreground: 224 71.4% 4.1%;
+    --card-icon: 331, 53%, 18%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
     --primary: 330, 7%, 6%, 1;
@@ -33,6 +34,7 @@
     --negative: 0, 84%, 63%;
     --select: 330, 5%, 8%;
     --pink: 331, 54%, 47%;
+    --counter: 340, 4%, 14%;
   }
 
   .dark {
