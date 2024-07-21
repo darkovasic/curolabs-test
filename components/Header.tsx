@@ -21,8 +21,8 @@ function Header({ metrics }: { metrics: AccountSummary }) {
             Account ID: {metrics.account_id}
           </p>
         </div>
-        <div className="flex justify-center h-8 px-8">
-          <Separator orientation="vertical" className="bg-secondary" />
+        <div className="flex justify-center px-8">
+          <Separator orientation="vertical" className="bg-secondary h-[32px]" />
         </div>
         <div className="flex justify-between items-center w-full h-full">
           <div className="flex gap-6">

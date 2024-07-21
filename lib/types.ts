@@ -42,7 +42,7 @@ export interface AccountSummary {
   winning_trades: number;
 }
 
-interface Trade {
+export interface Trade {
   account_id: number;
   balance: number;
   entry: number;
@@ -53,11 +53,11 @@ interface Trade {
   open_time: string;
   order_id: string;
   pl: number;
-  position_type: "long" | "short";
+  position_type: string;
   quantity: number;
   roi: number;
   sl: number;
-  status: "profit" | "loss";
+  status: string;
   symbol: string;
   tp: number;
 }
