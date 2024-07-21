@@ -6,9 +6,9 @@ import { TradeTable } from "./TradeTable";
 function Trades({ trades }: { trades: OpenTradesResponse }) {
   return (
     <div className="w-[1036px] bg-primary">
-      <div className="flex justify-between h-[54px] w-full py-6 px-4">
+      <div className="flex justify-between h-[54px] w-full px-4">
         <div className="flex gap-4 h-full">
-          <div className="flex justify-center items-center gap-1">
+          <div className="flex justify-center items-center gap-1 border-b-[2px] border-b-tab pt-[2px]">
             <div className="text-[14px] leading-[21px] font-medium">
               Open Positions
             </div>
@@ -48,7 +48,7 @@ function Trades({ trades }: { trades: OpenTradesResponse }) {
               Close All
             </Button>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center h-full">
             <div className="flex justify-center px-4 h-[21px]">
               <Separator orientation="vertical" className="bg-secondary" />
             </div>

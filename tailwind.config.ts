@@ -64,6 +64,10 @@ const config = {
         },
         pink: "hsl(var(--pink))",
         counter: "hsl(var(--counter))",
+        tab: "hsl(var(--tab))",
+      },
+      boxShadow: {
+        "tab-bottom": "0 0 2px 0 hsl(var(--tab))",
       },
       borderRadius: {
         lg: "var(--radius)",
