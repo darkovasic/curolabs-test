@@ -43,7 +43,9 @@ function OrderEntryPanel() {
           </div>
           <OrderEntryTabs />
         </div>
-        <AccountInfo />
+        <div className="p-6">
+          <AccountInfo />
+        </div>
       </div>
       <div className="flex flex-col items-center w-[40px] py-2 gap-1.5">
         <div className="flex flex-col justify-center items-center pl-[1px] gap-1">

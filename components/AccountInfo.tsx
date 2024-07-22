@@ -6,7 +6,7 @@ import { formatCurrency } from "@/lib/utils";
 
 function AccountInfo() {
   return (
-    <div className="flex flex-col w-[360px] p-6 gap-4">
+    <div className="flex flex-col gap-4">
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
           <span className="text-[16px] leading-[16px] font-semibold">
