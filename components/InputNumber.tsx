@@ -1,10 +1,37 @@
+"use client";
+
+import { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "@/components/ui/button";
+import { ChangeEvent } from "react";
 
 function InputNumber() {
+  const [value, setValue] = useState(0.0);
+
+  const handleIncrease = () => {
+    setValue((prevValue) => parseFloat((prevValue + 0.01).toFixed(2)));
+  };
+
+  const handleDecrease = () => {
+    setValue((prevValue) => {
+      const newValue = prevValue - 0.01;
+      return newValue >= 0 ? parseFloat(newValue.toFixed(2)) : prevValue;
+    });
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseFloat(e.target.value);
+    if (newValue >= 0) {
+      setValue(newValue);
+    }
+  };
+
   return (
     <div className="flex bg-input rounded-md h-[42px] border-[1px] border-secondary">
-      <Button className="flex justify-center items-center rounded-r-none rounded-l-md bg-transparent w-[56px]">
+      <Button
+        onClick={handleDecrease}
+        className="flex justify-center items-center rounded-r-none rounded-l-md bg-transparent w-[56px]"
+      >
         <svg
           width="14"
           height="2"
@@ -25,11 +52,14 @@ function InputNumber() {
       <Input
         className="flex justify-center items-center text-center grow border-none rounded-none text-secondary-foreground bg-transparent"
         type="number"
-        value="0.00"
+        value={value.toFixed(2)}
         step="0.01"
-        placeholder="0.00"
+        onChange={handleChange}
       ></Input>
-      <Button className="flex justify-center items-center rounded-l-none rounded-r-md bg-transparent w-[56px]">
+      <Button
+        onClick={handleIncrease}
+        className="flex justify-center items-center rounded-l-none rounded-r-md bg-transparent w-[56px]"
+      >
         <svg
           width="16"
           height="16"
