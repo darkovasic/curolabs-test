@@ -7,7 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Trade, OpenTradesResponse } from "@/lib/types";
-import { formatDate, formatTime } from "@/lib/utils";
+import { formatDate, formatTime, formatCurrency } from "@/lib/utils";
 
 export function TradeTable({ trades }: { trades: OpenTradesResponse }) {
   return (
@@ -62,7 +62,7 @@ export function TradeTable({ trades }: { trades: OpenTradesResponse }) {
             <TableCell
               className={`${trade.pl < 0 ? "text-negative" : "text-positive"}`}
             >
-              {trade.pl}
+              {formatCurrency(trade.pl)}
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-1">
