@@ -68,6 +68,8 @@ const config = {
       },
       boxShadow: {
         "tab-bottom": "0 0 2px 0 hsl(var(--tab))",
+        "entry-panel": "0px 1px 2px -1px hsla(0, 0%, 0%, 0.1)",
+        "entry-panel-2": "0px 1px 3px 0px hsla(0, 0%, 0%, 0.1)",
       },
       borderRadius: {
         lg: "var(--radius)",

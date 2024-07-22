@@ -6,11 +6,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { trades } from "@/lib/data";
-import { Trade } from "@/lib/types";
+import { Trade, OpenTradesResponse } from "@/lib/types";
 import { formatDate, formatTime } from "@/lib/utils";
 
-export function TradeTable() {
+export function TradeTable({ trades }: { trades: OpenTradesResponse }) {
   return (
     <Table>
       <TableHeader>

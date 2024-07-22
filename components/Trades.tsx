@@ -8,7 +8,7 @@ function Trades({ trades }: { trades: OpenTradesResponse }) {
     <div className="w-[1036px] bg-primary">
       <div className="flex justify-between h-[54px] w-full px-4">
         <div className="flex gap-4 h-full">
-          <div className="flex justify-center items-center gap-1 border-b-[2px] border-b-tab pt-[2px]">
+          <div className="flex justify-center items-center gap-1 border-b-[2px] border-b-tab pt-[2px] cursor-pointer">
             <div className="text-[14px] leading-[21px] font-medium">
               Open Positions
             </div>
@@ -16,7 +16,7 @@ function Trades({ trades }: { trades: OpenTradesResponse }) {
               {trades?.open_trades.length}
             </div>
           </div>
-          <div className="flex justify-center items-center gap-1">
+          <div className="flex justify-center items-center gap-1 cursor-pointer">
             <div className="text-[14px] leading-[21px] font-medium text-secondary-foreground">
               Open Orders
             </div>
@@ -24,7 +24,7 @@ function Trades({ trades }: { trades: OpenTradesResponse }) {
               4
             </div>
           </div>
-          <div className="flex justify-center items-center gap-1">
+          <div className="flex justify-center items-center gap-1 cursor-pointer">
             <div className="text-[14px] leading-[21px] font-medium text-secondary-foreground">
               Order History
             </div>
@@ -72,7 +72,7 @@ function Trades({ trades }: { trades: OpenTradesResponse }) {
           </div>
         </div>
       </div>
-      <TradeTable />
+      <TradeTable trades={trades} />
     </div>
   );
 }

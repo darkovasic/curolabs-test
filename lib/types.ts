@@ -66,3 +66,33 @@ export interface OpenTradesResponse {
   open_trades: Trade[];
   status: string;
 }
+
+interface Commission {
+  asset_class: string;
+  price_per_lot: number;
+}
+
+interface SymbolMapping {
+  mapping: string;
+  symbol: string;
+}
+
+export interface AccountData {
+  account_id: number;
+  account_name: string;
+  auto_be_level: number;
+  balance: number;
+  commissions: Commission[];
+  daily_loss_limit: number;
+  equity: number;
+  exchange: string;
+  leverage: number;
+  max_lot_sizes: any[]; // Adjust type if max_lot_sizes has a specific structure
+  one_click: boolean;
+  risk: number;
+  show_leaderboard: boolean;
+  starting_balance: number;
+  status: string;
+  symbol_mappings: SymbolMapping[];
+  take_profit_level: number;
+}
