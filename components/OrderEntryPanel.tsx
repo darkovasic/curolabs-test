@@ -1,6 +1,6 @@
-import { account_details } from "@/lib/data";
 import { Separator } from "@radix-ui/react-separator";
 import { OrderEntryTabs } from "./OrderEntryTabs";
+import AccountInfo from "./AccountInfo";
 
 function OrderEntryPanel() {
   return (
@@ -43,7 +43,7 @@ function OrderEntryPanel() {
           </div>
           <OrderEntryTabs />
         </div>
-        <div></div>
+        <AccountInfo />
       </div>
       <div className="flex flex-col items-center w-[40px] py-2 gap-1.5">
         <div className="flex flex-col justify-center items-center pl-[1px] gap-1">

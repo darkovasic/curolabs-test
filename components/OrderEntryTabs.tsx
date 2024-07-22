@@ -73,6 +73,14 @@ export function OrderEntryTabs() {
           </div>
         </div>
       </TabsContent>
+      <TabsContent value="sl">
+        <div className="flex flex-col gap-2">
+          <div className="text-[12px] leading-[18px] font-medium">
+            Limit Price
+          </div>
+          <InputNumber />
+        </div>
+      </TabsContent>
     </Tabs>
   );
 }
