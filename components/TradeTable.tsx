@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/table";
 import { Trade, OpenTradesResponse } from "@/lib/types";
 import { formatDate, formatTime, formatCurrency } from "@/lib/utils";
+import Pencil from "./icons/Pencil";
 
 export function TradeTable({ trades }: { trades: OpenTradesResponse }) {
   return (
@@ -67,18 +68,7 @@ export function TradeTable({ trades }: { trades: OpenTradesResponse }) {
             <TableCell>
               <div className="flex items-center gap-1">
                 <div className="flex justify-center items-center w-7 h-7 bg-card rounded-md border-[1px] border-secondary cursor-pointer">
-                  <svg
-                    width="10"
-                    height="10"
-                    viewBox="0 0 10 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6.02939 3.51L6.48939 3.97L1.95939 8.5H1.49939V8.04L6.02939 3.51ZM7.82939 0.5C7.70439 0.5 7.57439 0.55 7.47939 0.645L6.56439 1.56L8.43939 3.435L9.35439 2.52C9.54939 2.325 9.54939 2.01 9.35439 1.815L8.18439 0.645C8.08439 0.545 7.95939 0.5 7.82939 0.5ZM6.02939 2.095L0.49939 7.625V9.5H2.37439L7.90439 3.97L6.02939 2.095Z"
-                      fill="white"
-                    />
-                  </svg>
+                  <Pencil />
                 </div>
                 <div className="flex justify-center items-center w-7 h-7 bg-card rounded-md border-[1px] border-secondary cursor-pointer">
                   <svg
