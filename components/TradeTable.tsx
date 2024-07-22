@@ -35,7 +35,7 @@ export function TradeTable({ trades }: { trades: OpenTradesResponse }) {
           >
             <TableCell>
               <div>{formatDate(trade.open_time)}</div>
-              <div className="text-muted-foreground">
+              <div className="text-accent-foreground">
                 {formatTime(trade.open_time)}
               </div>
             </TableCell>

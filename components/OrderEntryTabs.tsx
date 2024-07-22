@@ -1,6 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Input } from "./ui/input";
+import InputNumber from "./InputNumber";
+import { Checkbox } from "./ui/checkbox";
+import { Separator } from "./ui/separator";
 
 export function OrderEntryTabs() {
   return (
@@ -25,50 +27,48 @@ export function OrderEntryTabs() {
             <div className="text-[12px] leading-[18px] font-medium">
               Limit Price
             </div>
-            <div className="flex bg-input rounded-md h-[42px] border-[1px] border-secondary">
-              <Button className="flex justify-center items-center rounded-r-none rounded-l-md bg-transparent w-[56px]">
-                <svg
-                  width="14"
-                  height="2"
-                  viewBox="0 0 14 2"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12.5999 1L1.3999 1L12.5999 1Z" fill="#898587" />
-                  <path
-                    d="M12.5999 1L1.3999 1"
-                    stroke="#898587"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </Button>
-              <Input
-                className="flex justify-center items-center text-center grow border-none rounded-none text-secondary-foreground bg-transparent"
-                type="number"
-                value="0.00"
-                step="0.01"
-                placeholder="0.00"
-              ></Input>
-              <Button className="flex justify-center items-center rounded-l-none rounded-r-md bg-transparent w-[56px]">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M8.0001 8.00156H1.6001H8.0001Z" fill="#898587" />
-                  <path
-                    d="M8.0001 1.60156V8.00156M8.0001 8.00156V14.4016M8.0001 8.00156H14.4001M8.0001 8.00156H1.6001"
-                    stroke="#898587"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </Button>
+            <InputNumber />
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="text-[12px] leading-[18px] font-medium">
+              <div className="flex justify-between">
+                <span>Quantity</span>
+                <span>$199,287.50</span>
+              </div>
+            </div>
+            <InputNumber />
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <Checkbox className="bg-input rounded border-[1px] border-secondary w-4 h-4" />
+              <span className="text-[12px] leading-[18px] font-normal">
+                Add Set TP{" "}
+                <span className="text-secondary-foreground">(Optional)</span>
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Checkbox className="bg-input rounded border-[1px] border-secondary w-4 h-4" />
+              <span className="text-[12px] leading-[18px] font-normal">
+                Add TP{" "}
+                <span className="text-secondary-foreground">(Optional)</span>
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-center items-center bg-input rounded-md h-[42px]">
+              <div className="flex justify-center items-center text-[12px] leading-[14] text-positive w-full">
+                1.06915
+              </div>
+              <div className="h-[21px]">
+                <Separator orientation="vertical" className="bg-secondary" />
+              </div>
+              <div className="flex justify-center items-center text-[12px] leading-[14] text-negative w-full">
+                1.06939
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <Button className="bg-positive w-full">Buy / Long</Button>
+              <Button className="bg-negative w-full">Sell / Short</Button>
             </div>
           </div>
         </div>

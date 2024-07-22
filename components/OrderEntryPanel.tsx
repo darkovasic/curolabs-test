@@ -35,7 +35,7 @@ function OrderEntryPanel() {
           <div className="flex justify-between items-center">
             <div className="flex gap-4 text-base font-semibold">
               <p className="cursor-pointer">Limit</p>
-              <p className="text-muted-foreground cursor-pointer">Market</p>
+              <p className="text-accent-foreground cursor-pointer">Market</p>
             </div>
             <div className="text-[12px] leading-[18px] font-normal text-tab cursor-pointer">
               Calculator
