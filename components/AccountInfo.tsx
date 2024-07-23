@@ -1,11 +1,11 @@
-import { account_details } from "@/lib/data";
 import { Separator } from "./ui/separator";
 import Image from "next/image";
 import logo from "@/public/logo.png";
 import { formatCurrency } from "@/lib/utils";
 import ChevronUp from "./icons/ChevronUp";
+import { AccountData } from "@/lib/types";
 
-function AccountInfo() {
+function AccountInfo({ accountDetails }: { accountDetails: AccountData }) {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex justify-between">
@@ -52,18 +52,18 @@ function AccountInfo() {
       <div className="flex flex-col gap-1 text-[12px] leading-[18px]">
         <div className="flex justify-between items-center">
           <div className="font-normal text-secondary-foreground">Name:</div>
-          <div className="font-medium">{account_details.account_name}</div>
+          <div className="font-medium">{accountDetails.account_name}</div>
         </div>
         <div className="flex justify-between items-center">
           <div className="font-normal text-secondary-foreground">Balance:</div>
           <div className="font-medium">
-            {formatCurrency(account_details.balance)}
+            {formatCurrency(accountDetails.balance)}
           </div>
         </div>
         <div className="flex justify-between items-center">
           <div className="font-normal text-secondary-foreground">Equity:</div>
           <div className="font-medium">
-            {formatCurrency(account_details.equity)}
+            {formatCurrency(accountDetails.equity)}
           </div>
         </div>
         <div className="flex justify-between items-center">
@@ -72,7 +72,7 @@ function AccountInfo() {
             <div className="flex shrink-0 w-4 h-4">
               <Image src={logo} alt="Curo Labs Logo" priority />
             </div>
-            {account_details.exchange}
+            {accountDetails.exchange}
           </div>
         </div>
       </div>

@@ -6,10 +6,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { current_prices } from "@/lib/data";
+import { PricesResponse } from "@/lib/types";
 
-function CurrentPrices() {
-  const priceOptions = Object.entries(current_prices?.prices[0]).map(
+function CurrentPrices({ currentPrices }: { currentPrices: PricesResponse }) {
+  const priceOptions = Object.entries(currentPrices?.prices[0]).map(
     ([currencyPair, value]) => ({
       currencyPair,
       value,

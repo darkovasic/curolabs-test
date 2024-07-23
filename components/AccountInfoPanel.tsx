@@ -2,42 +2,42 @@ import AccountInfo from "./AccountInfo";
 import Info from "@/components/icons/Info";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
-import { account_details } from "@/lib/data";
+import { AccountData } from "@/lib/types";
 import Pencil from "@/components/icons/Pencil";
 
-function AccountInfoPanel() {
+function AccountInfoPanel({ accountDetails }: { accountDetails: AccountData }) {
   return (
     <div className="flex flex-col w-[360px] h-[511px] bg-primary p-6 gap-4">
-      <AccountInfo />
+      <AccountInfo accountDetails={accountDetails} />
       <Separator className="bg-secondary" />
       <div className="flex flex-col gap-1 text-[12px] leading-[18px]">
         <div className="flex justify-between items-center">
           <div className="font-normal text-secondary-foreground">Leverage:</div>
-          <div className="font-medium">{account_details.leverage}x</div>
+          <div className="font-medium">{accountDetails.leverage}x</div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center font-normal text-secondary-foreground gap-1">
             <Info /> Risk:
           </div>
-          <div className="font-medium">{account_details.risk}%</div>
+          <div className="font-medium">{accountDetails.risk}%</div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center font-normal text-secondary-foreground gap-1">
             <Info /> Daily Loss Limit:
           </div>
-          <div className="font-medium">{account_details.daily_loss_limit}%</div>
+          <div className="font-medium">{accountDetails.daily_loss_limit}%</div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center font-normal text-secondary-foreground gap-1">
             <Info /> Take Profit (RR):
           </div>
-          <div className="font-medium">{account_details.take_profit_level}</div>
+          <div className="font-medium">{accountDetails.take_profit_level}</div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center font-normal text-secondary-foreground gap-1">
             <Info /> Auto BE Level (RR):
           </div>
-          <div className="font-medium">{account_details.auto_be_level}</div>
+          <div className="font-medium">{accountDetails.auto_be_level}</div>
         </div>
       </div>
       <Separator className="bg-secondary" />

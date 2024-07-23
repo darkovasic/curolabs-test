@@ -4,8 +4,9 @@ import { OrderEntryTabs } from "./OrderEntryTabs";
 import AccountInfo from "./AccountInfo";
 import ChevronDown from "./icons/ChevronDown";
 import EURUSD from "../public/flags/EURUSD.png";
+import { AccountData } from "@/lib/types";
 
-function OrderEntryPanel() {
+function OrderEntryPanel({ accountDetails }: { accountDetails: AccountData }) {
   return (
     <div className="flex w-[402px] h-[934px] bg-primary">
       <div className="w-[360px] border-r-[2px] border-r-secondary">
@@ -36,7 +37,7 @@ function OrderEntryPanel() {
           <OrderEntryTabs />
         </div>
         <div className="p-6">
-          <AccountInfo />
+          <AccountInfo accountDetails={accountDetails} />
         </div>
       </div>
       <div className="flex flex-col items-center w-[40px] py-2 gap-1.5">

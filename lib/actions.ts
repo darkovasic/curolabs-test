@@ -27,3 +27,13 @@ export async function getAccountDetails() {
 
   return res.json();
 }
+
+export async function getCurrentPrices() {
+  const res = await fetch("http://13.41.72.245/current_prices");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch current prices");
+  }
+
+  return res.json();
+}
