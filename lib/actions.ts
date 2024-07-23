@@ -17,3 +17,13 @@ export async function getOpenTrades() {
 
   return res.json();
 }
+
+export async function getAccountDetails() {
+  const res = await fetch("http://13.41.72.245/account_details");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch account details");
+  }
+
+  return res.json();
+}

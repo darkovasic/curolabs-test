@@ -175,3 +175,18 @@ export const account_details = {
   symbol_mappings: [{ mapping: "EURUSD.pro", symbol: "EURUSD" }],
   take_profit_level: 3,
 };
+
+export const current_prices = {
+  prices: [
+    {
+      AUDUSD: 0.6727,
+      EURCHF: 0.9731,
+      EURJPY: 174.3521,
+      EURUSD: 1.0812,
+      GBPUSD: 1.276,
+      NZDUSD: 0.6117,
+      USDCAD: 1.3611,
+    },
+  ],
+  status: "success",
+};

@@ -14,11 +14,11 @@ export function SelectRange() {
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        <SelectGroup>
-          <SelectItem value="week">This week</SelectItem>
-          <SelectItem value="month">This month</SelectItem>
-          <SelectItem value="year">This year</SelectItem>
-        </SelectGroup>
+        {/* <SelectGroup> */}
+        <SelectItem value="week">This week</SelectItem>
+        <SelectItem value="month">This month</SelectItem>
+        <SelectItem value="year">This year</SelectItem>
+        {/* </SelectGroup> */}
       </SelectContent>
     </Select>
   );

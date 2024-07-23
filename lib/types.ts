@@ -96,3 +96,18 @@ export interface AccountData {
   symbol_mappings: SymbolMapping[];
   take_profit_level: number;
 }
+
+export interface Prices {
+  AUDUSD: number;
+  EURCHF: number;
+  EURJPY: number;
+  EURUSD: number;
+  GBPUSD: number;
+  NZDUSD: number;
+  USDCAD: number;
+}
+
+export interface PricesResponse {
+  prices: Prices[];
+  status: string;
+}

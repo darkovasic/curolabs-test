@@ -3,7 +3,7 @@ import { Separator } from "./ui/separator";
 import { OrderEntryTabs } from "./OrderEntryTabs";
 import AccountInfo from "./AccountInfo";
 import ChevronDown from "./icons/ChevronDown";
-import EURUSA from "../public/flags/EURUSA.png";
+import EURUSD from "../public/flags/EURUSD.png";
 
 function OrderEntryPanel() {
   return (
@@ -11,7 +11,7 @@ function OrderEntryPanel() {
       <div className="w-[360px] border-r-[2px] border-r-secondary">
         <div className="flex justify-between items-center h-[64px] px-6 py-5">
           <div className="flex items-center gap-3">
-            <Image src={EURUSA} width={44} height={24} alt="EURUSA" />
+            <Image src={EURUSD} width={44} height={24} alt="EURUSD" />
             <div className="text-base leading-none font-semibold">EURUSD</div>
           </div>
           <div className="flex items-center gap-3">
