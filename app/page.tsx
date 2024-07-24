@@ -3,6 +3,7 @@ import OrderEntryPanel from "@/components/OrderEntryPanel";
 import AccountInfoPanel from "@/components/AccountInfoPanel";
 import CurrentPrices from "@/components/CurrentPrices";
 import Trades from "@/components/Trades";
+import Chart from "@/components/Chart";
 import {
   getMetrics,
   getOpenTrades,
@@ -18,6 +19,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-start gap-16 p-24">
       <Header metrics={metrics} />
+      <Chart />
       <Trades trades={trades} />
       <div className="flex gap-16">
         <OrderEntryPanel accountDetails={accountDetails} />
