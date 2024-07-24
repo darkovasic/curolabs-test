@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 
 export function OrderEntryTabs() {
   return (
-    <Tabs defaultValue="lots" className="">
+    <Tabs defaultValue="lots">
       <TabsList className="grid w-full grid-cols-2 h-[30px] text-white p-0 mb-[20px]">
         <TabsTrigger
           value="lots"

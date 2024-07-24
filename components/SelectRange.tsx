@@ -1,7 +1,6 @@
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -9,16 +8,14 @@ import {
 
 export function SelectRange() {
   return (
-    <Select defaultValue="week">
-      <SelectTrigger className="w-[120px] border-secondary bg-select">
+    <Select defaultValue="month">
+      <SelectTrigger className="w-[132px] border-secondary bg-select [&>span]:mr-4">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
-        {/* <SelectGroup> */}
         <SelectItem value="week">This week</SelectItem>
         <SelectItem value="month">This month</SelectItem>
         <SelectItem value="year">This year</SelectItem>
-        {/* </SelectGroup> */}
       </SelectContent>
     </Select>
   );

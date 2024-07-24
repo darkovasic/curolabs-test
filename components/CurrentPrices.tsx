@@ -19,7 +19,7 @@ function CurrentPrices({ currentPrices }: { currentPrices: PricesResponse }) {
   return (
     <div className="w-[360px] h-fit bg-primary">
       <Select defaultValue="EURUSD">
-        <SelectTrigger className="border-secondary bg-select border-none rounded-none px-6 h-16 w-full">
+        <SelectTrigger className="border-secondary bg-select border-none rounded-none px-6 h-16 w-full [&>span]:mr-4">
           <SelectValue className="w-full" />
         </SelectTrigger>
         <SelectContent className="w-full">
